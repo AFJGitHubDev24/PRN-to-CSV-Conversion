@@ -18,7 +18,7 @@ This script is a handy tool for converting binary PRN files — specifically one
 6. Print the summary of the conversion process.
 
 # Example usage:
-1. Specifies the input and output folders.
+1. Specifies the input and output folders (for example, 'inputprnswavecalibration' for input PRN files related to wave calibration, and 'outputcsvswavecalibration' to store the resultant CSV files related to wave calibration.
 2. Calls the function to process all PRN files in the input folder.
 
 # Note:
