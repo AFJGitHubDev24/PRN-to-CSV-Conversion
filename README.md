@@ -1,5 +1,5 @@
 ## PRN-to-CSV-Conversion using Python 📜 -> 💻
-Used Python libraries such as struct, Pandas, os and pathlib for converting binary encoded PRN files into CSV files containing numerical values.
+This script is a handy tool for converting binary PRN files — specifically ones containing float data—into clean, readable CSV files. It reads each PRN file one float (4 bytes) at a time, extracts the data, skips the first 29 records (likely some kind of header or unwanted preamble), and then writes the rest to a CSV format. It’s built to handle batches too: you just point it at a folder of PRN files, and it churns out the corresponding CSVs into a specified output folder. It even keeps score, telling you how many conversions succeeded or failed—so you can spot trouble without guessing.
 
 # Function to convert binary PRN to CSV:
   Opens the PRN file in binary mode.
@@ -10,13 +10,16 @@ Used Python libraries such as struct, Pandas, os and pathlib for converting bina
   Writes the cleaned data to a CSV file.
 
 # Function to process all PRN files:
-  Create an output folder to ensure that the same thing exists before writing files.
-  Lists and filters the input PRN files.
-  Iteration over each PRN file and generate corresponding CSV file names for output.
-  Calls the function to convert binary PRNs to CSVs
-  Two counters – successful and failed, for tracking the number of successful and failed conversions.
-  Print the summary of the conversion process.
+1. Create an output folder to ensure that the same thing exists before writing files.
+2. Lists and filters the input PRN files.
+3. Iteration over each PRN file and generate corresponding CSV file names for output.
+4. Calls the function to convert binary PRNs to CSVs
+5. Two counters – successful and failed, for tracking the number of successful and failed conversions.
+6. Print the summary of the conversion process.
 
 # Example usage:
-Specifies the input and output folders
-Calls the function to process all PRN files in the input folder.![image](https://github.com/user-attachments/assets/a1a51e33-b055-404c-9e6b-3bfed69a7dbc)
+1. Specifies the input and output folders.
+2. Calls the function to process all PRN files in the input folder.
+
+# Note:
+This script was created with a team of Junior Data Science Developer Interns from Ocean Oasis, a Norwegian-Spanish based water desalination company, which uses wave power of the ocean to produce freshwater.
