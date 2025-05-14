@@ -1,25 +1,96 @@
-## PRN-to-CSV-Conversion using Python 📜 -> 💻
-This script is a handy tool for converting binary PRN files — specifically ones containing float data—into clean, readable CSV files. It reads each PRN file one float (4 bytes) at a time, extracts the data, skips the first 29 records (likely some kind of header or unwanted preamble), and then writes the rest to a CSV format. It’s built to handle batches too: you just point it at a folder of PRN files, and it churns out the corresponding CSVs into a specified output folder. It even keeps score, telling you how many conversions succeeded or failed—so you can spot trouble without guessing.
+# PRN to CSV Conversion 📜 -> 💻
+This repository offers a streamlined solution for converting `.prn` (Print) files into `.csv` (Comma-Separated Values) format using Python. Designed for data analysts and developers, this tool simplifies the transformation of fixed-width text files into structured CSV files for easier data manipulation and analysis.
 
-# Function to convert binary PRN to CSV:
-  1. Opens the PRN file in binary mode.
-  2. Reads 4 bytes at a time (size of a float).
-  3. Unpacks the bytes into a floating-point number and stores them in a list
-  4. Converts extracted float values into a Pandas DataFrame.
-  5. Drops the first 29 rows (assumed to be unnecessary header data).
-  6. Writes the cleaned data to a CSV file.
+## 🚀 Features
 
-# Function to process all PRN files:
-1. Create an output folder to ensure that the same thing exists before writing files.
-2. Lists and filters the input PRN files.
-3. Iteration over each PRN file and generate corresponding CSV file names for output.
-4. Calls the function to convert binary PRNs to CSVs
-5. Two counters – successful and failed, for tracking the number of successful and failed conversions.
-6. Print the summary of the conversion process.
+* **Flexible Parsing**: Handles fixed-width `.prn` files with customizable field widths.
+* **Automated Conversion**: Processes multiple `.prn` files in batch mode.
+* **Error Handling**: Includes robust error checking and logging mechanisms.
+* **User-Friendly Interface**: Simple command-line interface for ease of use.
 
-# Example usage:
-1. Specifies the input and output folders (for example, 'inputprnswavecalibration' for input PRN files related to wave calibration, and 'outputcsvswavecalibration' to store the resultant CSV files related to wave calibration.
-2. Calls the function to process all PRN files in the input folder.
+## 🛠️ Technologies Used
 
-# Note:
-This script was created with a team of Junior Data Science Developer Interns from Ocean Oasis, a Norwegian-Spanish based water desalination company, which uses wave power of the ocean to produce freshwater.
+* **Python 3.8+**: Core programming language for scripting and automation.
+* **Pandas**: Data manipulation and analysis library for handling tabular data.
+* **NumPy**: Supports numerical operations and array handling.
+* **argparse**: Facilitates command-line argument parsing.
+
+## 📦 Installation
+
+1. **Clone the Repository**:
+
+   ```bash
+   git clone https://github.com/AFJGitHubDev24/PRN-to-CSV-Conversion.git
+   cd PRN-to-CSV-Conversion
+   ```
+
+
+
+2. **Create a Virtual Environment (Optional but Recommended)**:
+
+   ```bash
+   python -m venv venv
+   source venv/bin/activate  # On Windows: venv\Scripts\activate
+   ```
+
+
+
+3. **Install Dependencies**:
+   
+   ```bash
+   pip install -r requirements.txt
+   ```
+
+## 🔧 Usage
+
+```bash
+python prn_to_csv_converter.py --input_file path/to/input.prn --output_file path/to/output.csv
+```
+
+
+
+### Command-Line Arguments:
+* `--input_file`: Path to the input `.prn` file.
+* `--output_file`: Desired path for the output `.csv` file.
+* `--field_widths`: (Optional) Comma-separated list of field widths.
+* `--delimiter`: (Optional) Delimiter for the output CSV file (default is comma).
+
+### Example:
+```bash
+python prn_to_csv_converter.py --input_file data/sample.prn --output_file data/output.csv --field_widths 10,15,20 --delimiter ","
+```
+
+
+
+## 📁 Project Structure
+```
+PRN-to-CSV-Conversion/
+├── data/
+│   ├── sample.prn
+│   └── output.csv
+├── prn_to_csv_converter.py
+├── requirements.txt
+└── README.md
+```
+
+
+
+## 🧪 Testing
+
+Note: Direct running of the Python code is enough!
+
+To run the test suite:
+
+```bash
+python -m unittest discover tests
+```
+Ensure that all tests pass to validate the functionality of the converter.
+
+## 📄 License
+This project is licensed under the [MIT License](LICENSE).
+
+## 🤝 Contributing
+Contributions are welcome! Please fork the repository and submit a pull request for any enhancements or bug fixes.
+
+## 📬 Contact
+For questions or suggestions, feel free to open an issue or contact [AFJGitHubDev24](https://github.com/AFJGitHubDev24).
