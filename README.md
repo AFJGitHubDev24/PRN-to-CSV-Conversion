@@ -68,7 +68,7 @@ PRN-to-CSV-Conversion/
 ├── data/
 │   ├── sample.prn
 │   └── output.csv
-├── prn_to_csv_converter.py
+├── prntocsv.py
 ├── requirements.txt
 └── README.md
 ```
@@ -94,3 +94,6 @@ Contributions are welcome! Please fork the repository and submit a pull request 
 
 ## 📬 Contact
 For questions or suggestions, feel free to open an issue or contact [AFJGitHubDev24](https://github.com/AFJGitHubDev24).
+
+## Note: 
+The sample PRNs are unable to displayed as there is no direct option to open a PRN file due to it's binary-coded format!
