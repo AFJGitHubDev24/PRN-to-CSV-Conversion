@@ -82,7 +82,7 @@ def process_all_prn_files(input_folder, output_folder):
     print(f"Failed conversions: {failed}")
 
 # Example usage
-input_folder = r""  # Put your input folder path here
-output_folder = r""  # Put your output folder path here
+input_folder = r""  # Put your input folder path here (inside the double quotes)
+output_folder = r""  # Put your output folder path here (inside the double quotes)
 
 process_all_prn_files(input_folder, output_folder)
