@@ -89,9 +89,6 @@ Ensure that all tests pass to validate the functionality of the converter.
 ## 📄 License
 This project is licensed under the [Creative Commons Zero v1.0 Universal](LICENSE) license.
 
-## 🤝 Contributing
-Contributions are welcome! Please fork the repository and submit a pull request for any enhancements or bug fixes.
-
 ## 📬 Contact
 For questions or suggestions, feel free to open an issue or contact [AFJGitHubDev24](https://github.com/AFJGitHubDev24).
 
