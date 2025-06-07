@@ -87,7 +87,7 @@ python -m unittest discover tests
 Ensure that all tests pass to validate the functionality of the converter.
 
 ## 📄 License
-This project is licensed under the [GNU General Public License v3.0](LICENSE).
+This project is licensed under the [Creative Commons Zero v1.0 Universal](LICENSE) license.
 
 ## 🤝 Contributing
 Contributions are welcome! Please fork the repository and submit a pull request for any enhancements or bug fixes.
